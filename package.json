@@ -1,0 +1,47 @@
+{
+  "name": "carekids",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "scp -i my-pair-key.pem -r dist package.json ubuntu@3.144.245.13:/home/ubuntu/carekids",
+    "start": "node ./dist/user/app.js",
+    "dev": "nodemon --exec ts-node -- --files ./src/user/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@socket.io/mongo-adapter": "^0.1.0",
+    "@socket.io/mongo-emitter": "^0.1.0",
+    "@typegoose/typegoose": "^9.3.1",
+    "@types/node": "^16.11.12",
+    "axios": "^0.21.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.1",
+    "dotenv": "^10.0.0",
+    "fastify": "^3.20.2",
+    "fastify-cors": "^6.0.2",
+    "fastify-file-upload": "^3.0.0",
+    "fastify-jwt": "^3.0.1",
+    "fastify-plugin": "^3.0.0",
+    "fastify-static": "^4.2.3",
+    "fcm-node": "^1.6.1",
+    "md5": "^2.3.0",
+    "moment": "^2.29.1",
+    "mongodb": "^4.2.2",
+    "mongoose": "~6.0.14",
+    "socket.io": "^4.4.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/md5": "^2.3.1",
+    "@types/socket.io": "^3.0.2",
+    "@types/uuid": "^8.3.1",
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
